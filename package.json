@@ -1,0 +1,15 @@
+{
+  "name": "dealer",
+  "version": "1.0.0",
+  "dependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.54",
+    "deploy-to-gh-pages": "^1.1.0"
+  },
+  "private": true,
+  "scripts": {
+    "deploy": "npm run build && deploy-to-gh-pages --update web_deploy",
+    "start": "openapi preview-docs",
+    "build": "openapi bundle -o dist",
+    "test": "openapi lint"
+  }
+}
